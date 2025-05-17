@@ -1,0 +1,70 @@
+@model TestTask.User.User
+
+@using (Html.BeginForm("Edit", "Home", FormMethod.Post))
+{
+
+<div class="form-group">
+    @Html.LabelFor(model => model.CardCode)
+    @Html.TextBoxFor(model => model.CardCode, new { @class = "form-control", required = "required" })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.LastName)
+    @Html.TextBoxFor(model => model.LastName, new { @class = "form-control", required = "required" })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.FirstName)
+    @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control", required = "required" })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Surname)
+    @Html.TextBoxFor(model => model.Surname, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.PhoneMobile)
+    @Html.TextBoxFor(model => model.PhoneMobile, new { @class = "form-control", type = "tel" })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Email)
+    @Html.TextBoxFor(model => model.Email, new { @class = "form-control", type = "email" })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.GenderId)
+    @Html.DropDownListFor(model => model.GenderId,
+    new SelectList(new List<string> { "Male", "Female", "Other" }),
+    "Select Gender",
+    new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Birthday)
+    @Html.TextBoxFor(model => model.Birthday, new { @class = "form-control", type = "date" })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.City)
+    @Html.TextBoxFor(model => model.City, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Pincode)
+    @Html.TextBoxFor(model => model.Pincode, new { @class = "form-control", type = "number" })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Bonus)
+    @Html.TextBoxFor(model => model.Bonus, new { @class = "form-control", type = "number" })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Turnover)
+    @Html.TextBoxFor(model => model.Turnover, new { @class = "form-control", type = "number" })
+</div>
+
+<button type="submit" class="btn btn-primary">Save</button>
+}
