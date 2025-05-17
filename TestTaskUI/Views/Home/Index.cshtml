@@ -16,7 +16,7 @@
         <th>@Html.DisplayNameFor(model => model.Pincode)</th>
         <th>@Html.DisplayNameFor(model => model.Bonus)</th>
         <th>@Html.DisplayNameFor(model => model.Turnover)</th>
-        <th>Actions</th>
+        <th>Action</th>
     </tr>
     </thead>
     <tbody>
@@ -37,9 +37,8 @@
         <td>@Html.DisplayFor(modelItem => item.Bonus)</td>
         <td>@Html.DisplayFor(modelItem => item.Turnover)</td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.PK_Id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.PK_Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.PK_Id })
+            @Html.ActionLink("Edit", "Edit", new { id = item.PK_Id })
+
         </td>
     </tr>
     }
